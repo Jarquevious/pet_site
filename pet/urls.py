@@ -3,7 +3,7 @@ from django.urls import path
 from pet.views import Home, PetCreateView, Pet_List_Page, PetDetailView, AppointmentScheduler, CalendarView
 
 urlpatterns = [
-    path('', Home.as_view(), name='home'),
+    path('', Home.as_view(), name='home-page'),
     path('pets/', Pet_List_Page.as_view(), name='pets-list-page'),
     path('pet/create/', PetCreateView.as_view(), name='pet-create-page'),
     path('pets/<int:pet_id>/', PetDetailView.as_view(), name='pet-detail-page'),
