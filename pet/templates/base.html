@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
-<body> 
+<body style='background-color: fuchsia;'> 
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'home-page' %}"><i class="fas fa-dog"></i> SitterPet</a>
+    <a class="navbar-brand" href="{% url 'home-page' %}"><i ></i> SitterPet</a>
     <form class="form-inline ml-auto">
         {% if request.user.is_authenticated %}
       <div class="text-white">Hello, <strong>{{ user }}</strong>!</div>
