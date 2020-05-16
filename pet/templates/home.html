@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Pet Sitter{% endblock %}
+{% block content %}
+
+<center><h2>Welcome to Pet Sitter</h2></center>
+
+{% if request.user.is_authenticated %}
+
+<div class="container-fluid">
+    <form>
+        <center>
+            <h3>How can we serve you?</h3>
+    
+        <a href="{% url 'pets-list-page' %}"><img src="{% static 'assets/pets.jpg' %}" class=" pt-5 w-100 h-10; text-align-center">View the Current Pets</a>
+        <a href="{% url 'calendar-create' %}"><img src="{% static 'assets/bird.jpg' %}" class=" pt-5 w-100 h-100">Schedule a Pet Sitting</a>
+        {% if request.user.profile %}
+        {% endif %}
+        </center>
+    </form>
+    </div>
+{% else %}
+
+    <form>
+        <center>
+<br>
+        <center><a href=""><img src="{% static 'assets/Puppysit.jpg' %}" class=" pt-5 w-100 h-100"></a></center>
+        </center>
+
+    </form>
+{% endif %}
+
+{% endblock %}
