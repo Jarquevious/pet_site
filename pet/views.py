@@ -4,7 +4,7 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView
 from django.utils import timezone
 from django.http import HttpResponse 
-from pets.models import Pet, Appointment
+from pet.models import Pet, Appointment
 
 # Create your views here.
 class Home(ListView):
